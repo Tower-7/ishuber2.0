@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作品</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/myArticle.css">
+</head>
+<body>
+	<section class="nav">
+		<div class="back left"><a href="javascript:history.back(-1);"><img src="/move/img/back.png" alt=""></a></div>
+		<div class="logo"><img src="/move/img/ishubertext.png" alt=""></div>
+	</section>
+	<section class="content">
+		<div class="line"></div>
+		<div class="write">
+			<ul>
+				<% if(articles.length){
+				articles.forEach(function(article){ %>
+					<li class="articleList">
+						<div class="coverPic">
+							<img src="<%= article.coverPic %>" alt="">
+						</div>
+						<div class="witeContent">
+							<div><%= article.author %></div>
+							<div class="article"><%= moment(article.meta.updateAt).format('MM-DD HH:mm') %></div>
+						</div>
+						<div class="set">设置</div>
+						<div class="setBox"  data-id="<%= article._id %>" data-author="<%= article.author %>" data-title="<%= article.title %>" data-content="<%= article.content %>" data-coverPic="<%= article.coverPic %>" data-type="<%= article.type %>">
+							<ul>
+								<% if(article.public) { %>
+									<li class="clock"><span>设为私密</span></li>
+								<% } else { %>
+									<li class="submit"><span>发布文章</span></li>
+								<% } %>
+								
+								<li class="edit"><a href="/m/addArticle/<%= article._id %>"><span>编辑文章</span></a></li>
+								<li class="delete"><span>删除文章</span></li>
+							</ul>
+						</div>
+						<div class="contnet">
+							<div><%= article.title %></div>
+							<img src="<%= article.coverPic %>" alt="">
+						</div>
+					</li>
+				<% })
+				} %>
+					
+			</ul>
+		</div>
+	</section>
+	<section class="cover"></section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/myArticle.js"></script>
+</body>
+</html>

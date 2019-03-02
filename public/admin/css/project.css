@@ -1,0 +1,189 @@
+
+.main .project {
+	margin: 100px;
+	display: block;
+}
+.main table {
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	min-width: 1000px;
+	border-collapse: collapse;
+	border: 1px solid #aaa;
+}
+.main table th {
+	width: 120px;
+}
+.main table .thPic {
+	width: 200px;
+}
+.main table .trSort input {
+	width: 20px;
+}
+.main table th,.main table td {
+	position: relative;
+	border: 1px solid #aaa;
+	padding:6px 15px 6px 6px;
+}
+.main .project tbody tr img{
+	height: 80px;
+}
+.main .project .trSetting {
+	cursor: pointer;
+	line-height: 100%;
+}
+.main .project .trSetting div {
+	position: relative;
+	display: none;
+}
+.main .project .trSetting span {
+	display: inline-block;
+	margin-right: 5px;
+}
+.main .project .trSetting i {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	transform: translateY(-50%);
+	background-image: url(../img/set.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.main .project .trSetting div u {
+	position: absolute;
+	display: inline-block;
+	top: -1px;
+	right: 7px;
+	border-width: 8px;
+	border-style: solid;
+	outline: 1px;
+	border-color: #e6e6e6 #e6e6e6 #fff #e6e6e6;
+	z-index: 2;
+}
+.main .project .trSetting div ul {
+	position: absolute;
+	top: 15px;
+	right: 0;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	z-index: 1;
+}
+.main .project .trSetting div ul li {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 35px;
+}
+.main .project .trSetting div ul li:nth-child(1) {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px
+}
+.main .project .trSetting div ul li:nth-child(2) {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px
+}
+.main .project .trSetting div ul li:hover {
+	background-color: #555;
+	color: #fff;
+}
+.main .project .updateBox {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	z-index: 1;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px 50px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	display: none;
+}
+.main .project .updateBox li {
+	height: 50px;
+	line-height: 50px;
+}
+.main .project .updateBox li input {
+	font-size: 16px;
+}
+.main .project .updateBox .title {
+	height: 80px;
+}
+.main .project .updateBox h3 {
+	border-bottom: 1px solid #ccc;
+}
+.main .project .updateBox .projectPic {
+	position: relative;
+	height: auto;
+}
+.main .project .updateBox .projectPic img {
+	height: 200px;
+}
+.main .project .updateBox .button div {
+	display: inline-block;
+	float: right;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #249CFA;
+}
+.main .project .updateBox .button .cancel {
+	margin-left: 20px;
+	color: rgb(44, 74, 147);
+	background-color: rgb(241, 245, 253);
+	border: 1px solid rgb(176, 192, 231);
+}
+.main .project .updateBox .button .cancel:hover {
+	border-color: rgb(44, 74, 147);
+}
+.main .project .updateBox .button .submit:hover {
+	background-color: #4eaaf3;
+}
+.main .project .createProject td{
+	position: absolute;
+	right: 0;
+	width:100px;
+	border: 0;
+	cursor: pointer;
+}
+/*上传*/
+.main .project .projectPic .projectUpload_form {
+	position: absolute;
+	top: 50px;
+	width: 355px;
+	height: 200px;
+	overflow: hidden;
+}
+.main .project .projectPic .projectUpload_form .projectFile_box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	line-height: 200px;
+	background-color: rgba(1,1,1,0.4);
+}
+.main .project .projectPic .projectUpload_form .projectFile_box input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+#projectUpload {
+	position: absolute;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 5px 10px;
+    color: #555;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>profile</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/profile.css">
+</head>
+<body>
+	<section class="nav">
+		<div class="back left"><a href="javascript:history.back(-1);"><img src="/move/img/back.png" alt=""></a></div>
+		<div class="logo"><img src="/move/img/ishubertext.png" alt=""></div>
+	</section>
+	<section class="content">
+		<div class="intro">
+			<div class="avatar">
+				<img src="/move/img/my.png" alt="">
+			</div>
+			<div class="name">
+				<div><%= user.name %></div>
+				<div class="personalized"><!-- <%= user.name %> -->一二三四五六七</div>
+			</div>
+		</div>
+		<div class="news list">消息</div>
+		<div class="write list"><a href="/m/myArticle/<%= user.name %>">文章</a></div>
+		<div class="write list"><a href="/m/myWrite/<%= user.name %>">碎片</a></div>
+		<div class="like list">喜欢</div>
+		<div class="loginOut list"><a href="/logout">登出</a></div>
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/profile.js"></script>
+</body>
+</html>

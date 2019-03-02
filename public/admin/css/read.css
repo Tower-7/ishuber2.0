@@ -1,0 +1,196 @@
+
+.main .read {
+	margin: 100px;
+	display: block;
+}
+.main table {
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	min-width: 1000px;
+	border-collapse: collapse;
+	border: 1px solid #aaa;
+}
+.main table th {
+	width: 120px;
+}
+.main table .thPic {
+	width: 200px;
+}
+.main table .trSort input {
+	width: 20px;
+}
+.main table th,.main table td {
+	position: relative;
+	border: 1px solid #aaa;
+	padding:6px 15px 6px 6px;
+}
+.main .read tbody tr img{
+	width: 80%;
+}
+.main .read .trSetting {
+	cursor: pointer;
+	line-height: 100%;
+}
+.main .read .trSetting div {
+	position: relative;
+	display: none;
+}
+.main .read .trSetting span {
+	display: inline-block;
+	margin-right: 5px;
+}
+.main .read .trSetting i {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	transform: translateY(-50%);
+	background-image: url(../img/set.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.main .read .trSetting div u {
+	position: absolute;
+	display: inline-block;
+	top: -1px;
+	right: 7px;
+	border-width: 8px;
+	border-style: solid;
+	outline: 1px;
+	border-color: #e6e6e6 #e6e6e6 #fff #e6e6e6;
+	z-index: 2;
+}
+.main .read .trSetting div ul {
+	position: absolute;
+	top: 15px;
+	right: 0;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	z-index: 1;
+}
+.main .read .trSetting div ul li {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 35px;
+}
+.main .read .trSetting div ul li:nth-child(1) {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px
+}
+.main .read .trSetting div ul li:nth-child(2) {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px
+}
+.main .read .trSetting div ul li:hover {
+	background-color: #555;
+	color: #fff;
+}
+.main .read .updateBox {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	z-index: 1;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px 50px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	display: none;
+}
+.main .read .updateBox li {
+	height: 50px;
+	line-height: 50px;
+}
+.main .read .updateBox li input {
+	font-size: 16px;
+}
+.main .read .updateBox .title {
+	height: 80px;
+}
+.main .read .updateBox h3 {
+	border-bottom: 1px solid #ccc;
+}
+.main .read .updateBox .readPic {
+	position: relative;
+	height: auto;
+}
+.main .read .updateBox .readPic img {
+	height: 200px;
+}
+.main .read .updateBox .button div {
+	display: inline-block;
+	float: right;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #249CFA;
+}
+.main .read .updateBox .button .cancel {
+	margin-left: 20px;
+	color: rgb(44, 74, 147);
+	background-color: rgb(241, 245, 253);
+	border: 1px solid rgb(176, 192, 231);
+}
+.main .read .updateBox .button .cancel:hover {
+	border-color: rgb(44, 74, 147);
+}
+.main .read .updateBox .button .submit:hover {
+	background-color: #4eaaf3;
+}
+.main .read .createRead td{
+	position: absolute;
+	right: 0;
+	width:100px;
+	border: 0;
+	cursor: pointer;
+}
+/*上传*/
+.main .read .readPic .readUpload_form {
+	position: absolute;
+	top: 50px;
+	width: 355px;
+	height: 200px;
+	overflow: hidden;
+}
+.main .read .readPic .readUpload_form .readFile_box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	line-height: 200px;
+	background-color: rgba(1,1,1,0.4);
+}
+.main .read .readPic .readUpload_form .readFile_box input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+#readUpload {
+	position: absolute;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 5px 10px;
+    color: #555;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+.removeAll {
+	position: absolute;
+    right: 0;
+    width: 100px;
+    border: 0;
+    cursor: pointer;
+}

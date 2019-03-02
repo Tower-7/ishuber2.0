@@ -1,0 +1,97 @@
+
+.main .user {
+	margin: 100px;
+	display: block;
+}
+.main table {
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	min-width: 1000px;
+	border-collapse: collapse;
+	border: 1px solid #aaa;
+}
+.main table th {
+	width: 120px;
+}
+.main table .thPic {
+	width: 200px;
+}
+.main table .trSort input {
+	width: 20px;
+}
+.main table th,.main table td {
+	position: relative;
+	border: 1px solid #aaa;
+	padding:6px 15px 6px 6px;
+}
+.main .user tbody tr img{
+	width: 80%;
+}
+.main .user .trSetting {
+	cursor: pointer;
+	line-height: 100%;
+}
+.main .user .trSetting div {
+	position: relative;
+	display: none;
+}
+.main .user .trSetting span {
+	display: inline-block;
+	margin-right: 5px;
+}
+.main .user .trSetting i {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	transform: translateY(-50%);
+	background-image: url(../img/set.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.main .user .trSetting div u {
+	position: absolute;
+	display: inline-block;
+	top: -1px;
+	right: 7px;
+	border-width: 8px;
+	border-style: solid;
+	outline: 1px;
+	border-color: #e6e6e6 #e6e6e6 #fff #e6e6e6;
+	z-index: 2;
+}
+.main .user .trSetting div ul {
+	position: absolute;
+	top: 15px;
+	right: 0;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	z-index: 1;
+}
+.main .user .trSetting div ul li {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 35px;
+}
+.main .user .trSetting div ul li:nth-child(1) {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px
+}
+.main .user .trSetting div ul li:nth-child(2) {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px
+}
+.main .user .trSetting div ul li:hover {
+	background-color: #555;
+	color: #fff;
+}
+.main .user .createRead td{
+	position: absolute;
+	right: 0;
+	width:100px;
+	border: 0;
+	cursor: pointer;
+}

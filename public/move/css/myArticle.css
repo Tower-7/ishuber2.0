@@ -1,0 +1,115 @@
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background: #fff;
+	z-index: 1;
+}
+.nav .logo {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+.nav .logo img {
+	margin-top: 20px;
+	height: 20px;
+}
+.back{
+	position: absolute;
+	top: 15px;
+	left: 5px;
+}
+.back img {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.back a {
+	color: #555;
+	text-decoration: none;
+}
+.content {
+	margin-top: 60px;
+}
+.content .line {
+	width: 100%;
+	height: 5px;
+	background-color: #ddd;
+}
+
+.content .write .articleList {
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid #ccc;
+}
+.content .write .coverPic {
+	width: 60px;
+	height: 60px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+	overflow: hidden;
+}
+.content .write .coverPic img{
+	min-width: 100%;
+	height: 100%;
+}
+.content .write .witeContent {
+	display: inline-block;
+	line-height: 30px;
+	width: 60%;
+    vertical-align: top;
+}
+.content .write .witeContent .article {
+	font-size: 12px;
+}
+.set {
+	vertical-align: top;
+	display: inline-block;
+	padding: 5px 10px ;
+	background-color: #64d3c4;
+	border-radius: 5px;
+	color: #fff;
+}
+.contnet {
+	width: 90%;
+ 	margin: 5px auto;
+ }
+ .content img {
+ 	width: 100%;
+ 	
+ }
+.setBox {
+ 	position: absolute;
+ 	width: 100%;
+ 	height: auto;
+ 	background-color: #fff;
+ 	z-index: 2;
+	display: none;
+ }
+.setBox li {
+ 	width: 100%;
+ 	height: 30px;
+ 	line-height: 30px;
+ 	padding: 5px 0;
+ 	cursor: pointer;
+ }
+.setBox li:nth-child(2) {
+ 	border-top: 1px solid #ccc;
+ 	border-bottom: 1px solid #ccc;
+ }
+.setBox li span {
+ 	margin-left: 30px;
+ }
+ .cover {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100vh;
+ 	background-color: rgba(0,0,0,0.2);
+ 	z-index: 1;
+ 	display: none;
+ }

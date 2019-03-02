@@ -1,0 +1,134 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 50px;
+	line-height: 50px;
+	z-index: 999;
+	background: #fff;
+}
+.back{
+	padding-left: 10px;
+}
+.back img {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.back a {
+	color: #555;
+	text-decoration: none;
+}
+.submit {
+	padding-right: 10px;
+	color: #2E8B57;
+}
+
+.edit {
+	width: 90%;
+	margin: 50px auto 0;
+}
+
+.addContent {
+	width: 100px;
+	margin: 150px auto;
+	text-align: center;
+}
+.addContent img {
+	width: 100%;
+}
+.editBox {
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 60px;
+}
+.editBox .editContent {
+	width: 100%;
+}
+.editBox .insertContent {
+	position: relative;
+	display: none;
+    text-align: center;
+    margin: 10px 0 100px;
+    padding: 10px;
+    color: #2E8B57;
+    border-radius: 5px;
+    border: 1px solid #2E8B57;
+}
+.editContent>div {
+	margin-top: 5px;
+}
+.editContent .textBox {
+	position: relative;
+	border: 1px solid #ddd;
+}
+.editContent ul {
+	text-align: right;
+}
+.editContent .textBox .textContent {
+	margin: 20px 5px;
+}
+.editContent .set li {
+	display: inline-block;
+	font-size: 12px;
+	padding: 2px 5px;
+	background: #eee;
+	border: 1px solid #ddd;
+}
+.editContent .picBox {
+	position: relative;
+	border: 1px solid #ddd;
+}
+.editContent .picBox .picContent img{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+.contentElement {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 150px;
+	left: 0;
+	bottom: 0;
+	background-color: #ddd;
+}
+.contentElement>div {
+	position: relative;
+	height: 100%;
+	width: calc(50% - 3px);
+	display: inline-block;
+}
+.file_box {
+	display: block;
+	width: 100%;
+	height: 150px;
+	position: relative;
+}
+.file_box .selectPic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 999;
+}
+.contentElement>div img {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 50px;
+}
+.contentElement>div span {
+	position: absolute;
+    top: calc(30% + 55px);
+    left: 50%;
+    transform: translate(-50%);
+}
+#picUpload {
+	position: absolute;
+	display: none;
+}

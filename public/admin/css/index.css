@@ -1,0 +1,21 @@
+body {
+	width: 100%;
+}
+.sidebar {
+	float: left;
+	width: 100px;
+	height: 1800px;
+	background-color: #19233c;
+}
+.sidebar li {
+	color: #fff;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	cursor: pointer;
+}
+.main {
+	float: right;
+	width: calc(100% - 100px);
+	height: 800px;
+}

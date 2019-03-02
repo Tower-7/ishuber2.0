@@ -1,0 +1,175 @@
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background: #fff;
+}
+.nav .logo {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+.nav .logo img {
+	margin-top: 20px;
+	height: 20px;
+}
+.nav .list {
+	width: 100%;
+}
+.nav .list ul {
+	position: absolute;
+	width: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	text-align: center;
+}
+.nav .list li {
+	display: inline-block;
+	margin: 0 20px;
+    padding-bottom: 5px;
+}
+
+.content {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 110px;
+}
+.content .read a li {
+	margin-bottom: 30px;
+}
+.content .read a img {
+	width: 100%;
+	border-radius: 10px;
+}
+.content .read a h3 {
+}
+.content .read a .p {
+	font-size: 12px;
+	margin-top: 10px;
+	color: #555;
+}
+.content .read a .time {
+	font-size: 12px;
+    color: #555;
+    padding: 10px 0 10px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid #ddd;
+    line-height: 25px;
+}
+
+.content .essay li {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ddd;
+}
+.content .essay img {
+	width: 50%;
+	border-radius: 10px;
+}
+.content .essay h3 {
+	font-size: 16px;
+}
+.content .essay .p {
+	margin: 10px 0 20px;
+	font-size: 12px;
+	color: #555;
+}
+.content .essay span {
+	font-size: 12px;
+	color: #555;
+}
+.editCover {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: none;
+}
+.editCover .sentence {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform:translateX(-50%); 	
+	-moz-transform:translateX(-50%); 	
+	-webkit-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+	text-align: center;
+}
+.editCover .choose {
+	position: fixed;
+	width: 80%;
+	top: 50%;
+	left: 10%;
+}
+.editCover .item {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.editCover .item span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	background-color: #64d3c4;
+	border-radius: 30px;
+}
+.editCover .close {
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform:translateX(-50%); 	
+	-moz-transform:translateX(-50%); 	
+	-webkit-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+}
+.editCover .close img {
+	width: 30px;
+}
+.content .addEssay {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.content .addEssay .footer {
+	position: absolute;
+	right: 0;
+	width: 40px;
+}
+.content .addEssay .create {
+	position: absolute;
+	right: 100px;
+	width: 40px;
+}
+.content .addEssay .my {
+	position: absolute;
+	right: 50px;
+	width: 40px;
+}
+.content .about {
+	width: 100%;
+	margin-top: 50%;
+}
+.content .about img {
+	display: block;
+	width: 20%;
+	margin: 0  auto;
+}
+.content .about .text {
+	margin-top: 40px;
+	text-align: center;
+}

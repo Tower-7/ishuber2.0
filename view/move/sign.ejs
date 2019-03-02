@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="/common/css/init.css">
+</head>
+<style>
+	.signswap {
+		width: 100%;
+	}
+	.sign {
+		margin: 0 auto;
+		margin-top: 40%;
+		width: 60%;
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+	.signin {
+		color: #64d3c4;
+		border-bottom: 1px solid #64d3c4;
+	}
+	.signin,.signup{
+		width: 50%;
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 15px;
+	}
+	input {
+		display: block;
+		outline: none;
+		width: 100%;
+		border: none;
+		height: 14px;
+		line-height: 14px;
+		font-size: 14px;
+		padding: 15px 0px;
+		border-bottom: 1px solid #64d3c4;
+	}
+	.submitSignin,.submitSignup {
+		width: 150px;
+		height: 20px;
+		line-height: 20px;
+		padding: 10px;
+		margin: 0 auto;
+		margin-top: 40px;
+		text-align: center;
+		background: #64d3c4;
+		border-radius: 20px;
+		color: #fff;
+	}
+	.signupBox {
+		display: none;
+	}
+	.close {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+	}
+</style>
+<body>
+	<div class="signswap">
+		<a href="javascript:history.back(-1);"><img class='close' src="/move/img/close.png" alt=""></a>
+		<div class="sign">
+			<div class="signin left">登录</div>
+			<div class="signup right">注册</div>
+			<div class="signinBox">
+				<div class="content">
+					<input class="user" type="text" value="用户名">
+					<input class="password" type="text" value="密码">
+				</div>
+				<div class="submitSignin">登 录</div>
+			</div>
+			<div class="signupBox">
+				<div class="content">
+					<input class="user" type="text" value="用户名">
+					<input class="password" type="text" value="密码">
+					<input class="confirm" type="text" value="确认密码">
+				</div>
+				<div class="submitSignup">注 册</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		// var url = window.location.href
+		// url = url.match(/\?(\S*)/)[1];
+		$('.close').click(function(){
+			$('.signswap').css('display','none')
+		})
+		$('.signin').click(function() {
+			$('.signup').css({'color':'#000','border-bottom':'none'})
+			$('.signupBox').css('display','none')
+			$('.signinBox').css('display','block')
+			$(this).css({'color':'#64d3c4','border-bottom':'1px solid #64d3c4'})
+		})
+		$('.signup').click(function() {
+			$('.signin').css({'color':'#000','border-bottom':'none'})
+			$('.signinBox').css('display','none')
+			$('.signupBox').css('display','block')
+			$(this).css({'color':'#64d3c4','border-bottom':'1px solid #64d3c4'})
+		})
+		$('.user').focus(function(){
+			if($(this).val() == '用户名') {
+				$(this).val('')
+			}
+		})
+		$('.user').blur(function(){
+			if($(this).val() == '') {
+				$(this).val('用户名')
+			}
+		})
+		$('.password').focus(function(){
+			if($(this).val() == '密码') {
+				$(this).val('').attr('type','password')
+			}
+		})
+		$('.password').blur(function(){
+			if($(this).val() == '') {
+				$(this).val('密码').attr('type','text')
+			}
+		})
+		$('.confirm').focus(function(){
+			if($(this).val() == '确认密码') {
+				$(this).val('').attr('type','password')
+			}
+		})
+		$('.confirm').blur(function(){
+			if($(this).val() == '') {
+				$(this).val('确认密码').attr('type','text')
+			}
+		})
+		$('.submitSignup').click(function() {
+			var user = $('.signupBox .user').val()
+			var password = $('.signupBox .password').val()
+			var confirm = $('.signupBox .confirm').val()
+			if(user == '用户名'){
+				alert('用户名不能为空！！')
+			}
+			else if(password == '密码') {
+				alert('请设置密码~')
+			}
+			else if(confirm != password) {
+				alert('两次密码不一致哦~')
+			}
+			else {
+				$.ajax({
+					url: '/sign_up',
+					type: 'post',
+					data: {
+						name: user,
+						password: password
+					},
+					success: function(data){
+						if(data.status == 1) {
+							alert(data.msg)
+							window.location.href= url;
+						}
+						if(data.status == 2) {
+							alert(data.msg)
+						}
+					}
+				})
+			}
+				
+		})
+		$('.submitSignin').click(function() {
+			var user = $('.signinBox .user').val()
+			var password = $('.signinBox .password').val()
+
+			if(user == '用户名'){
+				alert('请填写用户名~')
+			}
+			else if(password == '密码') {
+				alert('请输入密码~')
+			}
+			else {
+				$.ajax({
+					url: '/sign_in',
+					type: 'post',
+					data: {
+						name: user,
+						password: password
+					},
+					success: function(data){
+						alert(data.msg)
+						if(data.status == 1) {
+							window.location.href= data.url;
+						}
+					}
+				})
+			}
+				
+		})
+	</script>
+</body>

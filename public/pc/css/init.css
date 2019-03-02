@@ -1,0 +1,24 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+body {
+	cursor: default;
+	font-family: Arial,Sans-serif,Verdana;
+}
+ul {
+	list-style: none;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}

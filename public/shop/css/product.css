@@ -1,0 +1,35 @@
+body {
+	background: #232228;
+}
+.logo {
+	position: relative;
+	top: 40px;
+	left: 40px;
+}
+.container{
+	-webkit-column-width:350px;
+	-moz-column-width:350px; 
+	-webkit-column-gap:25px;
+	-moz-column-gap:25px;
+	width: 90%;
+	margin: 30px auto;
+	margin-top: 100px;
+}
+
+
+/*鏁版嵁鍧� 鐮栧潡*/
+
+.container div{width:100%;
+               margin:20px 0;}
+.container div img {
+	width: 100%;
+}
+
+.footer {
+	width: 90%;
+	margin: 0 auto;
+}
+.footer img {
+	width: 100%;
+	margin: 70px auto;
+}

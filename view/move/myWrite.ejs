@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作品</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/myWrite.css">
+</head>
+<body>
+	<section class="nav">
+		<div class="back left"><a href="javascript:history.back(-1);"><img src="/move/img/back.png" alt=""></a></div>
+		<div class="logo"><img src="/move/img/ishubertext.png" alt=""></div>
+	</section>
+	<section class="content">
+		<div class="line"></div>
+		<div class="write">
+			<ul>
+				<% if(essays.length){
+				essays.forEach(function(essay){ %>
+					<li>
+						<div class="coverPic">
+							<img src="<%= essay.coverPic %>" alt="">
+						</div>
+						<div class="witeContent">
+							<div><%=  %></div>
+							<div class="article"><%= essay.content %></div>
+						</div>
+						<div class="del" data-id="<%= essay._id %>">删除</div>
+					</li>
+				<% })
+				} %>
+					
+			</ul>
+		</div>
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/myWrite.js"></script>
+</body>
+</html>

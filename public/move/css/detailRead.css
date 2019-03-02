@@ -1,0 +1,32 @@
+.article {
+	width: 85%;
+	margin: 10px auto 50px;
+	line-height: 25px;
+
+}
+.article .title {
+	font-size: 14px;
+	font-weight: bold;
+}
+.article .time {
+	display: inline-block;
+	margin: 10px;
+}
+.article .content p {
+	line-height: 30px;
+}
+.article .content img {
+	width: 100%;
+}
+.article .content span {
+	font-size: 14px;
+	color: #555;
+}
+.article .content .coverPic {
+	margin-bottom: 20px;
+}
+.article .content .coverText {
+	text-align: center;
+	font-size: 14px;
+	color: #555;
+}

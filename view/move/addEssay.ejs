@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ishuber</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/addEssay.css">
+</head>
+<body>
+	<div class="nav">
+		<div class="back left"><a href="javascript:history.back(-1);"><img src="/move/img/back.png" alt=""></a></div>
+		<div class="submit right">发布</div>
+	</div>
+	<div class="edit">
+		<div class="upload_form">
+            <a href="javascript:;" class="file_box">
+            	<input class="selectPic" type="file" name="selectPic" id="selectPic">
+        		<img src="/move/img/pic.png" alt="">
+        		<span>点 击 添 加 图 片</span>
+            </a>
+	        <p id="bannerresult"></p>
+	        <img id="coverImg" class="coverImg" src="">
+	    	<button id="bannerupload">开始上传</button>
+		</div>
+		<div class="content">
+			<p  contenteditable="true"></p>
+			<div class="tips">这一刻，我想说......</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="../move/js/addEssay.js"></script>
+</body>
+</html>

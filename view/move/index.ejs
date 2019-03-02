@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ishuber</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<meta name="Description" content="Ishuber-Life" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/index.css">
+  	  <script type="text/javascript">
+        var cdata = {
+            navhover:0        };
+        var wDomain = 'http://www.ishuber.com/';
+        var ucDomain = 'http://passport.ishuber.com/';
+        var cookieDomain = 'ishuber.com';
+        var ua = navigator.userAgent.toLowerCase();
+        var toUrl 
+        var isAndroid=navigator.userAgent.match(/android|Linux/ig),isIos=navigator.userAgent.match(/iphone|ipod|ipad/ig);
+        var phone = isAndroid || isIos
+        if(!phone){
+            toUrl = 'http://www.ishuber.com';
+            if(window.location.search.length>0) toUrl+=window.location.search;
+            window.location.href= toUrl;
+        }
+    </script>
+</head>
+<body>
+	<section class="nav">
+		<div class="logo"><img src="/move/img/ishubertext.png" alt=""></div>
+		<div class="list">
+			<ul>
+				<li><a href="#read">阅读</a></li>
+				<li><a href="#essay">碎片</a></li>
+				<li><a href="#about">关于</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="content">
+		<div class="read">
+			<ul>
+				<% if(articles.length) {
+					articles.forEach(function(article){ %>
+  				<li>
+					<a href="/m/detailRead/<%= article._id %>">
+						<img src="<%= article.coverPic %>" alt="">
+						<div><h3><%= article.title %></h3></div>
+						<div class="p"><%- article.content %></div>
+						<div class="time"><%= moment(article.meta.updateAt).format('MM-DD') %></div>
+					</a>
+				</li>
+					<% })
+				} %>
+				
+			</ul>
+			<div class="addEssay">
+				<img class="create" src="/move/img/create.png" alt="">
+				<a href="/m/profile/"><img class="my" src="/move/img/my.png" alt=""></a>
+				<img class="footer" src="/move/img/footer.png" alt="">
+			</div>
+		</div>
+		<div class="essay" id="essay">
+			<ul>
+				<% if(essays.length) {
+					essays.forEach(function(essay){ %>
+  				<li>
+					<div><h3><%= essay.author %></h3></div>
+					<span><%= moment(essay.meta.updateAt).startOf('hour').fromNow() %></span>
+					<div class="p"><%- essay.content %></div>
+					<% if(essay.coverPic){ %> <img src="<%= essay.coverPic %>" alt=""> <% } %>
+				</li>
+					<% })
+				} %>
+				
+			</ul>
+			<div class="addEssay">
+				<img class="create" src="/move/img/create.png" alt="">
+				<a href="/m/profile"><img class="my" src="/move/img/my.png" alt=""></a>
+				<img class="footer" src="/move/img/footer.png" alt="">
+			</div>
+		</div>
+		<div class="about" id="about">
+			<img src="/common/img/ishuber.png" alt="">
+			<div class="text">Ishuber · Life</div>
+		</div>
+	</section>
+	<section class="editCover">
+		<div class="sentence">世界很美<br>而你正好有空</div>
+		  <div class="choose">
+		    <ul>
+		      <li class="item">
+		        <a href="/m/addArticle"><span>文章</span></a>
+		      </li>
+		      <li class="item"><a href="/m/addEssay"><span>碎片</span></a></li>
+		    </ul>
+		  </div>
+		<div class="close"><img src="/move/img/close.png" alt=""></div>
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="../move/js/index.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!-- <script>
+	var url = window.location.href
+  // 请求签名
+  $.ajax({
+    url: "/signture",
+    type: 'post',
+    data: {
+    	url: url,
+    },
+    success:function(data){
+    }
+  });
+  
+</script> -->
+
+</body>
+</html>

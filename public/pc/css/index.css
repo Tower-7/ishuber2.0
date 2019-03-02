@@ -1,0 +1,445 @@
+section {
+	color: #555;
+	font-weight: 300;
+}
+.banner {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+/*banner-pic*/
+.banner .bannerWrap {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 0;
+}
+.banner .bannerWrap:nth-child(1) {
+	background-image: url(../img/home/1.jpg);
+	z-index: 2;
+}
+.banner .bannerWrap:nth-child(2) {
+	background-image: url(../img/home/1.jpg);
+}
+.banner .bannerWrap:nth-child(3) {
+	background-image: url(../img/home/1.jpg);
+}
+.bannermove {
+	animation:bannermove 1s linear 1;
+	animation-fill-mode: forwards;
+}
+.bannermoves {
+	animation:bannermoves 1s linear 1;
+	animation-fill-mode: forwards;
+}
+@keyframes bannermove
+{
+0% {clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0 0%);}
+40% {clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0 15%);}
+100% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);}
+}
+@keyframes bannermoves
+{
+0% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);}
+40% {clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0 50%);}
+100% {clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0 0%);}
+}
+
+/*banner-controls*/
+.banner .controls {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 60px;
+	background-color: #efefef;
+	z-index: 5;
+}
+.banner .slider-controls {
+	float: right;
+	background: #fff;
+}
+.banner .scroll {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	margin-left: 20px;
+	font-size: 1.2vw;
+	cursor: pointer;
+}
+.banner .slider-controls div {
+	float: left;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	cursor: pointer;
+}
+.banner .text {
+	position: absolute;
+	top: 70vh;
+	left: 50vw;
+	color: #fff;
+	font-size: 3vw;
+	font-weight: 350;
+}
+.banner .text span {
+	position: relative;
+}
+.banner .text .detail span:nth-child(1) {
+	animation:spanmove 0.6s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .detail span:nth-child(2) {
+	animation:spanmove 0.7s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .detail span:nth-child(3) {
+	animation:spanmove 0.8s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .detail span:nth-child(4) {
+	animation:spanmove 0.9s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .detail span:nth-child(5) {
+	animation:spanmove 1s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .details span:nth-child(1) {
+	animation:spanmove 0.8s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .details span:nth-child(2) {
+	animation:spanmove 0.9s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .details span:nth-child(3) {
+	animation:spanmove 1s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .details span:nth-child(4) {
+	animation:spanmove 1.1s linear 1;
+	animation-fill-mode: forwards;
+}
+.banner .text .details span:nth-child(5) {
+	animation:spanmove 1.2s linear 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes spanmove
+{
+0% {top: 0;}
+100% {top: -30vh;}
+}
+
+/*ourConcept*/
+.ourConcept {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.ourConcept .txt {
+	position: absolute;
+    top: 50%;
+    left: 5%;
+    font-weight: 100;
+    font-size: 1vw;
+    transform-origin: 0;
+    transform: rotate(-90deg);
+
+}
+.ourConcept .content {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #efefef;
+}
+.ourConcept .content .txtwrap {
+	width: 25%;
+    padding: 5% 10%;
+}
+.ourConcept .content .txtwrap span{
+	display: block;
+	margin-top: 150px;
+	line-height: 5vw;
+	font-size: 2.5vw;
+	transition: all 1s;
+	opacity: 0;
+}
+.ourConcept .content .txtwrap p {
+	margin-top: 150px;
+	line-height: 3.5vw;
+	font-size: 1.25vw;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.ourConcept .pic {
+	position: absolute;
+	bottom: -20vh;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.ourConcept .pic .leftPic {
+	position: absolute;
+	left: 0;
+	width: 50%;
+	height: 60%;
+	bottom: 0;
+}
+.ourConcept .pic .rightPic {
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 60%;
+	bottom: 10%;
+}
+.ourConcept .pic ul {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.ourConcept .pic .list {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: left 0.5s;
+}
+.ourConcept .pic .leftPic .list:nth-child(1) {
+	background-image: url(../img/home/4.jpg);
+}
+.ourConcept .pic .leftPic .list:nth-child(2) {
+	left: 100%;
+	background-image: url(../img/home/6.jpg);
+}
+.ourConcept .pic .leftPic .list:nth-child(3) {
+	left: -100%;
+	background-image: url(../img/home/7.jpg);
+}
+.ourConcept .pic .rightPic .list:nth-child(1) {
+	background-image: url(../img/home/9.jpg);
+}
+.ourConcept .pic .rightPic .list:nth-child(2) {
+	left: 100%;
+	background-image: url(../img/home/5.jpg);
+}
+.ourConcept .pic .rightPic .list:nth-child(3) {
+	left: -100%;
+	background-image: url(../img/home/8.jpg);
+}
+.ourConcept .pic .controls {
+	position: absolute;
+	top: 100%;
+	width: 120px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 1.5s;
+	opacity: 0;
+}
+.ourConcept .pic .button {
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+}
+
+/*project*/
+.project {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.project .title {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 200px;
+	opacity: 0;
+	transition: all 1.5s;
+}
+.project .title h3 {
+	display: inline-block;
+    margin-left: 10%;
+    width: 4vw;
+    font-size: 2.5vw;
+    font-weight: 300;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    border-bottom: 3px solid #555;
+}
+.project .pic {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 200px;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.project .pic .list {
+	float: left;
+	width: 33.33%;
+	height: 60vh;
+	background: #888;
+	background-size: cover;
+}
+.project .pic .list:nth-child(1) {
+	background-image: url('../img/home/project_1.jpg');
+}
+.project .pic .list:nth-child(2) {
+	background-image: url('../img/home/project_2.jpg');
+}
+.project .pic .list:nth-child(3) {
+	background-image: url('../img/home/project_3.jpg');
+}
+.project .pic .list div {
+	position: relative;
+	top: 110%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	text-align: center;
+}
+
+/*contact*/
+.contact {
+	position: relative;
+	margin-top: 200px;
+	width: 100%;
+	height: 20vw;
+}
+.contact .bg {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/home/11.jpg');
+	background-size: cover;
+}
+.contact .bgcover {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+.contact .bgcover .title {
+	position: absolute;
+	top: 20vw;
+	left: 5vw;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.contact .bgcover span {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+	padding: 5px;
+	margin-right: 15px;
+}
+.contact .bgcover h3 {
+	display: inline-block;
+	color: #fff;
+	font-size: 2vw;
+}
+.contact .contactStyle {
+	position: absolute;
+	top: 26vw;
+	left: 10vw;
+	width: 60vw;
+	height: 20vw;
+	background: #ccc;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.contact .contactStyle .list {
+	position: relative;
+	width: 20vw;
+	height: 20vw;
+	float: left;
+	background-size: cover;
+	background-color: rgba(0,0,0,0.1);
+}
+.contact .contactStyle .listCover {
+	width: 20vw;
+	height: 20vw;
+	background-color: rgba(0,0,0,0.4);
+	color: #fff;
+}
+.contact .contactStyle span {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 1.3vw;
+	line-height: 3vw;
+	text-align: center;
+	transform: translate(-50%);
+}
+.contact .contactStyle .list:nth-child(1){
+	background-image: url('../img/home/6.jpg');
+}
+.contact .contactStyle .list:nth-child(2){
+	background-image: url('../img/home/7.jpg');
+}
+
+.contact .contactStyle .list:nth-child(3){
+	background-image: url('../img/home/8.jpg');
+}
+.contact .contactStyle .list:nth-child(3):hover  .wechatPic{
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.contact .contactStyle .list .wechatPic {
+	width: 100%;
+	height: 100%;
+	/*background-image: url('../img/home/wechat.png');*/
+	transition: all 0.5s;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 30%);
+	background-size: cover;
+}
+.footer {
+	position: relative;
+	top: 30vw;
+	width: 90%;
+	left: 5%;
+	height: 10vw;
+}
+.footer .footerNav {
+	width: 50%;
+}
+.footer .footerNav .title {
+	padding-right: 5vw;
+	font-size: 3vw;
+}
+.footer .footerNav .content {
+	width: 20vw;
+}
+.footer .footerNav .content .list {
+	width: 10vw;
+	line-height: 3vw;
+}
+.footer .footerContact .list {
+	float: left;
+	line-height: 10vw;
+	padding: 0 2vw;
+}
+.footer .footerContact .list .go {
+	background: #888;
+    display: inline-block;
+    height: 5vw;
+    color: #fff;
+    line-height: 5vw;
+    padding: 0 2vw;
+}
+

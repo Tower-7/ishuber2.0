@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章内容</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/addArticleContent.css">
+</head>
+<body>
+	<div class="nav">
+		<div class="back left"><img src="/move/img/back.png" alt=""></div>
+		<div class="submit right" data_id='<% if(article.length){ %><%= article[0]._id %><% } %>' data_title='<% if(article.length){ %><%= article[0].title %><% } %>' data_type='<% if(article.length){ %><%= article[0].type %><% } %>' data_coverPic='<% if(article.length){ %><%= article[0].coverPic %><% } %>'>保存</div>
+	</div>
+	<div class="edit">
+		<div class="addContent">
+			<img src="/move/img/create1.png" alt="">
+        	<span>添 加 内 容</span>
+		</div>
+		<div class="editBox">
+			<div class="editContent">
+				<% if(article.length){ %><%- article[0].content %><% } %>
+			</div>
+			<span class="insertContent"> + 添 加 内 容</span>
+		</div>
+		<div class="contentElement">
+			<div class="text">
+				<img src="/move/img/pic.png" alt="">
+				<span>text</span>
+			</div>
+			<div class="pic">
+				<div class="upload_form">
+		            <a href="javascript:;" class="file_box">
+		            	<input class="selectPic" type="file" name="selectPic" id="selectPic">
+		        		<img src="/move/img/pic.png" alt="">
+		        		<span>图片</span>
+		            </a>
+			    	<button id="picUpload">开始上传</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/addArticleContent.js"></script>
+</body>
+</html>

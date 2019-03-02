@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+i{
+    font-style: normal
+}
+body {
+    background-color: #fff;
+}
+header {
+    font-size: 0;
+    height: 40px;
+    margin-top: 10px;
+}
+header .logo {
+    display: inline-block;
+    width: 15%;
+}
+.logo img {
+    width: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.search {
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #efefef;
+}
+input{ 
+    width: 70%;
+    vertical-align: middle;
+    outline: none;
+    border: none;
+    padding: 5px 5px 5px 40px;
+    color: #555;
+    background: #efefef;
+    height: 20px;
+    line-height: 20px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 12px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #aaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #aaa;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #aaa;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #aaa;
+}
+.search img {
+    width: 15px;
+    top: 5px;
+    left: 15px;
+    position: absolute;
+}
+.search i {
+    position: absolute;
+    right: 0;
+    color: #555;
+    background: #f1cb6f;
+    color: #fff;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.banner {
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+}
+.in {
+    font-size: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+.in li {
+    display: inline-block;
+    width: 25%;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+.in li img {
+    width: 50%
+}
+.in .text {
+    color: #555;
+    margin: 5px 0;
+    font-size: 0.75rem;
+}
+.ads {
+    margin: 15px 5px;
+    border-radius: 10px;
+    font-size: 0;
+    box-shadow: 1px 5px 5px #ccc;
+    background: #f1cb6f;
+}
+.ad .title {
+    margin: 5px 0;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 14px;
+    border-right: 1px solid #fff;
+    display: inline-block;
+    width: calc(20% - 17px);
+}
+
+.ad .content {
+    color: #fff;
+    float: right;
+    padding-left: 20px;
+    width: calc(80% - 20px);
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 42px;
+}
+.recruit .title {
+    width: 92%;
+    margin: 20px auto 10px;
+    color: #555;
+    line-height: 100%;
+}
+.recruit .title .more {
+    float: right;
+    font-size: 12px;
+}
+.recruit .title .more img {
+    width: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: -2px;
+}
+.recruit .content .line {
+    width: 90%;
+    margin: 20px auto 0;
+    height: 1px;
+    border: none;
+    background: #e5b43a;
+}
+.recruit .comList {
+    width: 95%;
+    margin: 10px auto;
+    font-size: 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+.comList .comLogo {
+    width: 30%;
+    display: inline-block;
+    height: 5rem;
+    position: relative;
+    vertical-align: top;
+    left: 5px;
+}
+.comList .comLogo img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.comList .comIntro {
+    width: 35%;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5%;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    color: #555;
+    transform: translateY(-50%);
+}
+.comList .comIntro h3 {
+    color:#333
+}
+.comList .comIntro b {
+    color: #e5b43a;
+    font-weight: normal;
+}
+.comList .intro {
+    width: 25%;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.comList .intro .button {
+    width: 100%;
+    border: 1px solid #e5b43a;
+    margin: 10px 0;
+    color: #e5b43a;
+    padding: 2px 5px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 5px;
+}
+.button img {
+    width: 20px;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+.noMore {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    color: #555;
+}
+footer {
+    font-size: 0;
+    margin-top: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+footer li {
+    display: inline-block;
+    width: 25%;
+    padding: 5px 0;
+    font-size: 12px;
+    text-align: center;
+}
+footer li img {
+    width: 25%
+}
+footer .text {
+    color: #555;
+    margin: 2px 0;
+    font-size: 0.75rem;
+}
+footer .home .text {
+    color: #e5b43a;
+}

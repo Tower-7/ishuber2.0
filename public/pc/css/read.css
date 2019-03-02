@@ -1,0 +1,31 @@
+body {
+	background-color: transparent;
+}
+.banner .bg {
+	position: relative;
+	width: 100%;
+	background: url(../img/read/bg.jpg) 0 bottom no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.banner .title {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	height: 50px;
+	color: #555;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	background-color: #fff;
+}
+.ProTxt {
+	color: #555;
+	line-height: 60px;
+}
+.ProTxt .wrap {
+	width: 50%;
+	margin: 50px auto;
+}

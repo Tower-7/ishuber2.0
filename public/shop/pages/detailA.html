@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="顶尖灯具设计" />
+	<title>Ishuber</title>
+	<link rel="stylesheet" href="../css/init.css">
+	<link rel="stylesheet" href="../css/swiper.css">
+	<link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+<nav class="nav">
+	<a href="../index.html">
+		<img src="../img/icon/back.png">
+	</a>
+</nav>
+<!-- Swiper -->
+<div class="device">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+	        	<div class="swiper-slide"> <img src="../img/detail/A/1.jpg"> </div>
+	        	<div class="swiper-slide"> <img src="../img/detail/A/2.jpg"> </div>
+	        	<div class="swiper-slide"> <img src="../img/detail/A/3.jpg"> </div>
+	      	</div>
+    	</div>
+    <div class="pagination"></div>
+</div>
+
+<!-- 商品名称 -->
+<div class="name">
+	<span class="title">Ishuber[新年红]吊灯组</span>
+	<span class="price">￥355</span>
+	<span class="shippingCost">来源于: <i>微店</i></span>
+</div>
+<div class="space"></div>
+<div class="detail">
+	<div class="title">
+		<div class="square"></div><span>商品详情</span>
+	</div>
+	<div class="content">
+		<h2>Ishuber[新年红]吊灯组</h2>
+		 <img src="../img/detail/A/1.jpg">
+		 <img src="../img/detail/A/2.jpg">
+		 <img src="../img/detail/A/3.jpg">
+	</div>
+		
+</div>
+<!-- end -->
+<div class="end"><span>END</span></div>
+<!-- footer -->
+<div class="footer">
+  <ul>
+    <li>
+      <div>
+      </div>
+    </li>
+    <li>
+      <div>
+      </div>
+    </li>
+    <li class="shopping">
+      <a href="https://weidian.com/?userid=315352106&wfr=BuyercopyURL"><div>去购买</div></a>
+    </li>
+  </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/detail.js"></script>
+ <script type="text/javascript">
+  var swiperContainerWidth = $(window).width();
+  $('.swiper-container img').css({'width':swiperContainerWidth + 'px'})
+  var swiperContainerHeight = $('.swiper-slide img').height()
+  $('.swiper-container').css({'height': swiperContainerHeight + 'px','width':swiperContainerWidth + 'px'})
+ </script>
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+    paginationClickable: true
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  $('.swiper-container img').css({'width' : '100%'})
+  </script>
+</body>
+</html>

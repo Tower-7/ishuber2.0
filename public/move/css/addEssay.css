@@ -1,0 +1,90 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 50px;
+	line-height: 50px;
+	z-index: 999;
+	background: #fff;
+}
+.back{
+	padding-left: 10px;
+}
+.back img {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.back a {
+	color: #555;
+	text-decoration: none;
+}
+.submit {
+	padding-right: 10px;
+	color: #2E8B57;
+}
+
+.edit {
+	width: 90%;
+	margin: 50px auto 0;
+}
+.upload_form {
+	position: relative;
+}
+.file_box {
+	display: block;
+	width: 100%;
+	height: 300px;
+	background-color: #ddd;
+	position: relative;
+}
+.file_box .selectPic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 999;
+}
+
+.file_box img {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 20px;
+}
+.file_box span {
+	position: absolute;
+	top: calc(40% + 25px);
+	left: 50%;
+	transform: translate(-50%);
+}
+.content {
+	position: relative;
+	margin-top: 20px;
+}
+.content  p {
+	width: 100%;
+	border: none;
+	outline: none;
+}
+.content .tips {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #666;
+}
+.upload_form .coverImg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+	max-height: 100%;
+	max-width: 100%;
+}
+#bannerupload {
+	position: absolute;
+	display: none;
+}

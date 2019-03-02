@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ishuber</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<meta name="Description" content="Ishuber-Life" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/addArticle.css">
+</head>
+<body>
+	<div class="nav">
+		<div class="back left"><a href="javascript:history.back(-1);"><img src="/move/img/back.png" alt=""></a></div>
+		<div class="submit right" data_content = '<% if(article.length){ %><%= article[0].content %><% } %>' data_id='<% if(article.length){ %><%= article[0]._id %><% } %>'  data_public='<% if(article.length){ %><%= article[0].public %><% } %>'>发布</div>
+		<div class="save right">保存</div>
+	</div>
+	<div class="edit">
+		<div class="upload_form">
+            <a href="javascript:;" class="file_box">
+            	<input class="selectPic" type="file" name="selectPic" id="selectPic">
+        		<img src="/move/img/pic.png" alt="">
+        		<span>点 击 添 加 封 面</span>
+            </a>
+	        <p id="bannerresult"></p>
+	        <img id="coverImg" class="coverImg" src="<% if(article.length){ %><%- article[0].coverPic %><% } %>">
+	    	<button id="bannerupload">开始上传</button>
+		</div>
+		<div class="title">
+			<p  contenteditable="true"><% if(article.length){ %><%- article[0].title %><% } %></p>
+			<div class="tips">标题</div>
+		</div>
+		<div class="typeBox">
+			<div class="choosetype"><i class="<% if(article.length){ %><%= article[0].type %><% } %>">选择投稿类型</i>          +</div>
+			<div class="type">
+				<ul>
+					<li class="阅读">阅读</li>
+					<li class="摄影">摄影</li>
+					<li class="设计">设计</li>
+					<li class="绘画">绘画</li>
+					<li class="电影">电影</li>
+					<li class="技术">技术</li>
+					<li class="other">其他</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="submitTitle" data_id='<% if(article.length){ %><%= article[0]._id %><% } %>' data_title='<% if(article.length){ %><%= article[0].title %><% } %>' data_type='<% if(article.length){ %><%= article[0].type %><% } %>' data_coverPic='<% if(article.length){ %><%= article[0].coverPic %><% } %>'>编辑文章内容  ></div>
+			<div class="articleContent"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/addArticle.js"></script>
+</body>
+</html>

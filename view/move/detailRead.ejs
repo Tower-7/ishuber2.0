@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ishuber</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  	<meta name="Description" content="Ishuber-Life" />
+  	<link rel="stylesheet" href="/common/css/init.css">
+  	<link rel="stylesheet" href="/move/css/detailRead.css">
+</head>
+<body>
+	<section class="article">
+		<div class="title">
+			<h1><%= article[0].title %></h1>
+		</div>
+		<div class="content">
+			<span class="type"><%= article[0].type %> & <%= article[0].author %></span>
+			<span class="time"><%= moment(article[0].meta.updateAt).format('MM-DD') %></span>
+			<div class="coverPic">
+				<img src="<%= article[0].coverPic %>" alt="">
+				<div class="coverText"><%= article[0].author %>作品</div>
+			</div>
+			
+			<p><%- article[0].content %></p>
+		</div>
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/move/js/detailRead.js"></script>
+</body>
+</html>
