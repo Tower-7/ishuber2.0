@@ -13,7 +13,7 @@ app.use(bodyparser())
 //连接数据库
 mongoose.Promise = require('bluebird')
 // const dbUrl = 'mongodb://localhost:27017/web'
-const dbUrl = 'mongodb://admin:xyzqq*859632@47.88.53.87:16016/'
+const dbUrl = 'mongodb://root:password@localhost:27017/'
 //参数设置
 const options = {
   useMongoClient: true,
@@ -45,4 +45,4 @@ ejs(app, {
 router(app)
 //设置全局moment
 global.moment = moment;
-app.listen(2000);
+app.listen(8080);
