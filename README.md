@@ -22,7 +22,7 @@ docker-compose build && \
 docker-compose up -d
 ```
 
-### 二、分步安装
-```
-1、[安装docker](https://github.com/Tower-7/docker/blob/master/README.md)
-```
+##### 二、分步安装
+
+ 1、[安装docker](https://github.com/Tower-7/docker/blob/master/README.md)
+
