@@ -10,7 +10,7 @@ python setupDockerCompose.py && \
 cd /config && \
 git clone https://github.com/Tower-7/mongo.git && \
 cd mongo && \
-python setupMongo.py && 、
+python setupMongo.py && \
 mkdir -p /home/wwwroot/ && \
 cd /home/wwwroot/ && \
 git clone https://github.com/Tower-7/node.git && \
