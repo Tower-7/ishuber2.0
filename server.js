@@ -13,7 +13,7 @@ app.use(bodyparser())
 //连接数据库
 mongoose.Promise = require('bluebird')
 // const dbUrl = 'mongodb://localhost:27017/web'
-const dbUrl = 'mongodb://root:password@localhost:27017/'
+const dbUrl = 'mongodb://root:password@39.107.244.119:27017/'
 //参数设置
 const options = {
   useMongoClient: true,
